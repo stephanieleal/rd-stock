@@ -1,0 +1,29 @@
+{% extends "siteApp/base.html" %}
+{% load company_details %}
+{% load static %}
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="{% static 'siteApp/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+  <div class="header ui-helper-clearfix">
+    <div class="div-username">
+      <label>{{user}}</label>
+      <a href="logout/">Logout</a>
+    </div>
+  </div>
+  <div class="following ui-helper-clearfix">
+    {% for company in user.companies.all %}
+    <div class="small-company">
+      {% company_small_details company  %}
+      <input type="submit" value="Unfollow" onclick="window.location='/unfollow_company/{{company.id}}/';" />
+      <br><br>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="not-following">
+    {% for company in companies.all %}
+      {{company}}
+      <input type="submit" value="Follow" onclick="window.location='/follow_company/{{company.id}}/';" />
+      <br><br>
+    {% endfor %}
+  </div>
+{% endblock %}

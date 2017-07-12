@@ -1,0 +1,10 @@
+<header class="header">HEADER</header>
+<script>
+  document.body.style.display = "none";
+  window.onload = function() {
+    // Previne mostrar a página antes de carregas as coisas (fotos em principal)
+    document.body.style.display = "";
+  }
+</script>
+{% block content %}{% endblock %}
+<footer class="footer">FOOTER</footer>

@@ -1,0 +1,9 @@
+<table>
+      {{wikipedia.summary}} <a href="{{wikipedia.link}}"> Read More</a>
+      {% for key, value in wikipedia.infobox.items %}
+        <tr>
+            <td>{{key}}</td>
+            {{value|safe}}
+            {% endfor %}
+        </tr>
+</table>
