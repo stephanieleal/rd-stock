@@ -26,11 +26,7 @@ SECRET_KEY = 'zyv57mkg*m=8m#3w15lmmt+(%xrtf&0c()o8-)3%)kq7o0o=z$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ["rd-stock-beta.herokuapp.com","rdstock.herokuapp.com"]
-=======
-ALLOWED_HOSTS = ["rd-stock.herokuapp.com", "rdstock.herokuapp.com", "rd-stock-beta.herokuapp.com"]
->>>>>>> parent of 1ff4bb8... Merge pull request #1 from GLOFonseca/transicao
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = "login/"
