@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from utils import PeriodicThread, CompanyUtils
+from django.conf import settings
 
 from .models import Company
 from .import views
