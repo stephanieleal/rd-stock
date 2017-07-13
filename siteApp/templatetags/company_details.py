@@ -12,7 +12,8 @@ def company_small_details(company):
         "actual_stock": company.stock,
         "stock_change": CompanyUtils.getPercentIncrement(company.stock, previous),
         "id": company.id,
+        "something": other,
         "logo": company.logo,
         "value": previous,
-        "something": other
+
 }
