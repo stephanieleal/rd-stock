@@ -35,6 +35,9 @@ class CompanyStockValue(models.Model):
 			return (self.getIncrement() * 100) / self.previous.value
 		return 0
 
+	def tradeDecision(self):
+		return -10
+
 	def __str__(self):
 		date_str = self.date.strftime('%d/%m/%Y %H:%M')
 		return "%s - %.2f at %s" %(self.company.name, self.value, date_str)
