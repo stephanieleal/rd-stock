@@ -20,7 +20,10 @@ def company_details(request, company_id):
 	company = get_object_or_404(Company, pk=company_id)
 	CompanyUtils.updateShares(company)
 	company_news = company.news.order_by("-date")[:5]
-	return render(request, 'siteApp/company_details.html', {"company": company, "company_news": company_news})
+	user = request.user.site_user
+	companies = Company.objects.exclude(pk__in=user.companies.all())
+	name = 'images/{}.jpg'.format(company.name)
+	return render(request, 'siteApp/company_details.html', {"company": company, "company_news": company_news, "user": request.user.site_user, "companies": companies, "name": name})
 
 @login_required
 def dashboard(request):

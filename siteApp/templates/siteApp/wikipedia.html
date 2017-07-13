@@ -1,9 +1,54 @@
-<table>
+{% load static %}
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>StockStalker</title>
+
+  <!-- Bootstrap -->
+  <link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css'%}" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="{% static 'vendors/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="{% static 'vendors/nprogress/nprogress.css'%}" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="{% static 'vendors/iCheck/skins/flat/green.css'%}" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="{% static 'vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css'%}" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="{% static 'vendors/jqvmap/dist/jqvmap.min.css'%}" rel="stylesheet"/>
+  <!-- bootstrap-daterangepicker -->
+  <link href="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.css'%}" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="{% static 'css/custom.min.css'%}" rel="stylesheet">
+</head>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <p>
       {{wikipedia.summary}} <a href="{{wikipedia.link}}"> Read More</a>
-      {% for key, value in wikipedia.infobox.items %}
-        <tr>
-            <td>{{key}}</td>
-            {{value|safe}}
-            {% endfor %}
-        </tr>
+      </p>
+    </tr>
+    &nbsp;
+    {% for key, value in wikipedia.infobox.items %}
+      <tr>
+        <p>
+        <td>{{key}}</td>
+        <td>{{value|safe}}</td>
+        </p>
+      </tr>
+    {% endfor %}
+  </tbody>
 </table>

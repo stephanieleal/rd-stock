@@ -1,0 +1,587 @@
+2017-07-09 13:44:47 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: site_app_scraper)
+2017-07-09 13:44:47 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'site_app_scraper.spiders', 'SPIDER_MODULES': ['site_app_scraper.spiders'], 'LOG_FILE': 'logs/default/wiki_spider/e95f817c64c511e7aa6c6c71d9d2db93.log', 'BOT_NAME': 'site_app_scraper'}
+2017-07-09 13:44:47 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-07-09 13:44:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-07-09 13:44:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-07-09 13:44:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['site_app_scraper.pipelines.SiteAppScraperPipeline']
+2017-07-09 13:44:48 [scrapy.core.engine] INFO: Spider opened
+2017-07-09 13:44:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-07-09 13:44:48 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-07-09 13:44:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://en.wikipedia.org/wiki/Main_Page> from <GET https://en.wikipedia.org/wiki/>
+2017-07-09 13:44:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Main_Page> (referer: None)
+2017-07-09 13:44:50 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:44:50 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "GET /get_companies_wikis HTTP/1.1" 200 894
+2017-07-09 13:44:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Micron_Technology> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:44:51 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:44:51 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Micron+Technology%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:44:51 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:44:53 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Micron+Technology%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 158
+2017-07-09 13:44:53 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:44:54 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Micron+Technology&action=query HTTP/1.1" 301 0
+2017-07-09 13:44:54 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:44:56 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Micron+Technology&action=query HTTP/1.1" 200 275
+2017-07-09 13:44:56 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:44:56 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Micron+Technology&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:44:56 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:44:58 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Micron+Technology&action=query&explaintext= HTTP/1.1" 200 297
+2017-07-09 13:44:58 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:44:59 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 163188
+2017-07-09 13:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Micron_Technology>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Micron_Technology_logo.svg/225px-Micron_Technology_logo.svg.png',
+ 'name': u'Micron Technology, Inc.',
+ 'nasdaq': u'MU',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">May 22, 1978<span class=\\"noprint\\">; 39 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">May 22, 1978</span>)</span></td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Sanjay_Mehrotra\\" title=\\"Sanjay Mehrotra\\">Sanjay Mehrotra</a> (<a href=\\"https://en.wikipedia.org/wiki/CEO\\" class=\\"mw-redirect\\" title=\\"CEO\\">CEO</a>)<sup id=\\"cite_ref-1\\" class=\\"reference\\"><a href=\\"#cite_note-1\\">[1]</a></sup></td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Lexar\\" title=\\"Lexar\\">Lexar Media</a></td>", "Headquarters": "<td class=\\"adr\\" style=\\"line-height:1.35em;\\"><span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Boise,_Idaho\\" title=\\"Boise, Idaho\\">Boise, Idaho</a></span>, <span class=\\"country-name\\"><a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">United States</a>.</span></td>"}, "link": "https://en.wikipedia.org/wiki/Micron_Technology", "summary": "Micron Technology, Inc. is an American global corporation based in Boise, Idaho which produces many forms of semiconductor devices, including dynamic random-access memory, flash memory, and solid-state drives."}'}
+2017-07-09 13:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Cisco_Systems> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:44:59 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:44:59 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Cisco+Systems%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:44:59 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:00 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Cisco+Systems%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 156
+2017-07-09 13:45:00 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:01 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Cisco+Systems&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:01 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:01 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Cisco+Systems&action=query HTTP/1.1" 200 271
+2017-07-09 13:45:01 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:02 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Cisco+Systems&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:02 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:02 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Cisco+Systems&action=query&explaintext= HTTP/1.1" 200 355
+2017-07-09 13:45:02 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:02 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 175664
+2017-07-09 13:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Cisco_Systems>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/230px-Cisco_logo.svg.png',
+ 'name': u'Cisco Systems, Inc.',
+ 'nasdaq': u'CSCO',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">December\\u00a010, 1984<span class=\\"noprint\\">; 32 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1984-12-10</span>)</span> in <a href=\\"https://en.wikipedia.org/wiki/San_Francisco\\" title=\\"San Francisco\\">San Francisco</a>, <a href=\\"https://en.wikipedia.org/wiki/California\\" title=\\"California\\">California</a>, United States</td>", "Founders": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Leonard_Bosack\\" title=\\"Leonard Bosack\\">Leonard Bosack</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Sandy_Lerner\\" title=\\"Sandy Lerner\\">Sandy Lerner</a></td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/List_of_acquisitions_by_Cisco_Systems\\" title=\\"List of acquisitions by Cisco Systems\\">List of Cisco Acquisitions</a></td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/John_T._Chambers\\" title=\\"John T. Chambers\\">John Chambers</a> (<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Chairman</a>)</li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Chuck_Robbins\\" title=\\"Chuck Robbins\\">Chuck Robbins</a> (<a href=\\"https://en.wikipedia.org/wiki/Chief_executive_officer\\" title=\\"Chief executive officer\\">CEO</a>)</li>\\n</ul>\\n</div>\\n</td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/San_Jose,_California\\" title=\\"San Jose, California\\">San Jose</a>, <a href=\\"https://en.wikipedia.org/wiki/California\\" title=\\"California\\">California</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a><sup id=\\"cite_ref-1\\" class=\\"reference\\"><a href=\\"#cite_note-1\\">[1]</a></sup></td>"}, "link": "https://en.wikipedia.org/wiki/Cisco_Systems", "summary": "Cisco Systems, Inc. (known as Cisco) is an American multinational technology conglomerate headquartered in San Jos\\u00e9, California, in the center of Silicon Valley, that develops, manufactures, and sells networking hardware, telecommunications equipment, and other high-technology services and products."}'}
+2017-07-09 13:45:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Groupon> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:03 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:03 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Groupon%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:03 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:04 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Groupon%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 152
+2017-07-09 13:45:04 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:04 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Groupon&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:04 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:05 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Groupon&action=query HTTP/1.1" 200 261
+2017-07-09 13:45:05 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:05 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Groupon&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:05 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:06 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Groupon&action=query&explaintext= HTTP/1.1" 200 365
+2017-07-09 13:45:06 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:06 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 150670
+2017-07-09 13:45:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Groupon>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Groupon_Logo.svg/250px-Groupon_Logo.svg.png',
+ 'name': u'Groupon, Inc.',
+ 'nasdaq': u'GRPN',
+ 'wikipedia': '{"infobox": {"Headquarters": "<td class=\\"adr\\"><span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Chicago\\" title=\\"Chicago\\">Chicago</a>, Illinois, U.S.A</span></td>"}, "link": "https://en.wikipedia.org/wiki/Groupon", "summary": "Groupon is an American worldwide e-commerce marketplace connecting subscribers with local merchants by offering activities, travel, goods and services in more than 28 countries. Based in Chicago, Groupon was launched in November 2008, and the first market for Groupon was Chicago, followed soon thereafter by Boston, New York City and Toronto."}'}
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/21st_Century_Fox> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Nvidia> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Qualcomm> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Splunk> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Microsoft> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Comcast> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Intel> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Apple_Inc.> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:06 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:06 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Twenty-First+Century+Fox%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:06 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:08 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Twenty-First+Century+Fox%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 159
+2017-07-09 13:45:08 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:09 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=21st+Century+Fox&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:09 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:10 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=21st+Century+Fox&action=query HTTP/1.1" 200 277
+2017-07-09 13:45:10 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:11 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=21st+Century+Fox&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:11 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:13 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=21st+Century+Fox&action=query&explaintext= HTTP/1.1" 200 295
+2017-07-09 13:45:13 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:13 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 197504
+2017-07-09 13:45:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/21st_Century_Fox>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/21st_Century_Fox_logo.svg/220px-21st_Century_Fox_logo.svg.png',
+ 'name': u'Twenty-First Century Fox, Inc.',
+ 'nasdaq': u'FOXA',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">June\\u00a028, 2013<span class=\\"noprint\\">; 4 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">2013-06-28</span>)</span><br>\\n<a href=\\"https://en.wikipedia.org/wiki/New_York_City\\" title=\\"New York City\\">New York City</a></td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Rupert_Murdoch\\" title=\\"Rupert Murdoch\\">Rupert Murdoch</a><br>\\n(<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Executive Co-Chairman</a>)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Lachlan_Murdoch\\" title=\\"Lachlan Murdoch\\">Lachlan Murdoch</a><br>\\n(<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Executive Co-Chairman</a>)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/James_Murdoch\\" title=\\"James Murdoch\\">James Murdoch</a> (<a href=\\"https://en.wikipedia.org/wiki/Chief_executive_officer\\" title=\\"Chief executive officer\\">CEO</a>)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Chase_Carey\\" title=\\"Chase Carey\\">Chase Carey</a><br>\\n(<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Vice Chairman</a>)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Chip_Smith\\" title=\\"Chip Smith\\">Chip Smith</a><br>\\n(Executive Vice President of Public Affairs)</td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/20th_Century_Fox\\" title=\\"20th Century Fox\\">20th Century Fox</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Blue_Sky_Studios\\" title=\\"Blue Sky Studios\\">Blue Sky Studios</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/20th_Century_Fox_Television\\" title=\\"20th Century Fox Television\\">20th Century Fox Television</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Fox_Star_Studios\\" title=\\"Fox Star Studios\\">Fox Star Studios</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Fox_Broadcasting_Company\\" title=\\"Fox Broadcasting Company\\">Fox</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/FX_Networks\\" class=\\"mw-redirect\\" title=\\"FX Networks\\">FX Networks</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Fox_News_Channel\\" class=\\"mw-redirect\\" title=\\"Fox News Channel\\">Fox News Channel</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Sky_plc\\" title=\\"Sky plc\\">Sky plc</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Endemol_Shine_Group\\" title=\\"Endemol Shine Group\\">Endemol Shine Group</a> (50%)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/20th_Television\\" title=\\"20th Television\\">20th Television</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Fox_Television_Stations\\" title=\\"Fox Television Stations\\">Fox Television Stations</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/National_Geographic_(magazine)\\" title=\\"National Geographic (magazine)\\">National Geographic Partners</a> (73%)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Fox_Sports_Networks\\" title=\\"Fox Sports Networks\\">Fox Sports Networks</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Hulu\\" title=\\"Hulu\\">Hulu</a> (30%)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/YES_Network\\" title=\\"YES Network\\">YES Network</a> (80%)<br>\\n<a href=\\"https://en.wikipedia.org/wiki/TrueX\\" title=\\"TrueX\\">TrueX</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/STAR_TV\\" class=\\"mw-redirect\\" title=\\"STAR TV\\">STAR TV</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Fox_Digital_Entertainment\\" title=\\"Fox Digital Entertainment\\">Fox Digital Entertainment</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/FoxNext\\" title=\\"FoxNext\\">FoxNext</a></td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/1211_Avenue_of_the_Americas\\" title=\\"1211 Avenue of the Americas\\">1211 Avenue of the Americas</a>, <span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/New_York_City\\" title=\\"New York City\\">New York</a>, <a href=\\"https://en.wikipedia.org/wiki/NY\\" class=\\"mw-redirect\\" title=\\"NY\\">NY</a> 10036<br>\\nU.S.</span></td>"}, "link": "https://en.wikipedia.org/wiki/21st_Century_Fox", "summary": "Twenty-First Century Fox Inc. (stylized as 21st Century Fox, simply known as Fox, and also called 21CF) is an American multinational mass media corporation based in Midtown Manhattan, New York City."}'}
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Ascena_Retail_Group> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Marvell_Technology_Group> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Nutanix> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/JD.com> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Applied_Materials> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Sirius_XM_Holdings> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/PayPal> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Zynga> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:45:13 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:14 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Nvidia+Corporation&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:14 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:15 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Nvidia+Corporation&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 151
+2017-07-09 13:45:15 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:15 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Nvidia&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:15 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:17 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Nvidia&action=query HTTP/1.1" 200 259
+2017-07-09 13:45:17 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:17 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Nvidia&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:17 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:18 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Nvidia&action=query&explaintext= HTTP/1.1" 200 379
+2017-07-09 13:45:18 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:19 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 166129
+2017-07-09 13:45:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Nvidia>
+{'logo': u'//upload.wikimedia.org/wikipedia/en/thumb/6/6d/Nvidia_image_logo.svg/150px-Nvidia_image_logo.svg.png',
+ 'name': u'Nvidia Corporation',
+ 'nasdaq': u'NVDA',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">April\\u00a01993<span class=\\"noprint\\">; 24\\u00a0years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1993-04</span>)</span></td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Jensen_Huang\\" title=\\"Jensen Huang\\">Jensen Huang</a> <small>(President &amp; <a href=\\"https://en.wikipedia.org/wiki/Chief_executive_officer\\" title=\\"Chief executive officer\\">CEO</a>)</small></li>\\n<li>Colette M. Kress <small>(<a href=\\"https://en.wikipedia.org/wiki/Chief_financial_officer\\" title=\\"Chief financial officer\\">CFO</a>)</small></li>\\n</ul>\\n</div>\\n</td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Mental_Images\\" title=\\"Mental Images\\">NVIDIA Advanced Rendering Center</a></td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Santa_Clara,_California\\" title=\\"Santa Clara, California\\">Santa Clara, California</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></td>"}, "link": "https://en.wikipedia.org/wiki/Nvidia", "summary": "Nvidia Corporation ( in-VID-ee\\u0259) (most commonly referred to as Nvidia, stylized as NVIDIA, nVIDIA or nvidia) is an American technology company based in Santa Clara, California. It designs graphics processing units (GPUs) for the gaming and professional markets, as well as system on a chip units (SOCs) for the mobile computing and automotive market."}'}
+2017-07-09 13:45:19 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:19 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Qualcomm%2C+Incorporated.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:19 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:21 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Qualcomm%2C+Incorporated.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 151
+2017-07-09 13:45:21 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:21 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Qualcomm&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:21 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:22 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Qualcomm&action=query HTTP/1.1" 200 261
+2017-07-09 13:45:22 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:23 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Qualcomm&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:23 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:24 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Qualcomm&action=query&explaintext= HTTP/1.1" 200 316
+2017-07-09 13:45:24 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:24 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 160307
+2017-07-09 13:45:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Qualcomm>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Qualcomm-Logo.svg/220px-Qualcomm-Logo.svg.png',
+ 'name': u'Qualcomm, Incorporated.',
+ 'nasdaq': u'QCOM',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">1985<span class=\\"noprint\\">; 32\\u00a0years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1985</span>)</span><br>\\n<a href=\\"https://en.wikipedia.org/wiki/San_Diego\\" title=\\"San Diego\\">San Diego</a>, <a href=\\"https://en.wikipedia.org/wiki/California\\" title=\\"California\\">California</a>, U.S.</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Paul_E._Jacobs\\" title=\\"Paul E. Jacobs\\">Paul E. Jacobs</a><br>\\n<small>(Executive Chairman)</small><br>\\nSteven Mollenkopf<br>\\n<small>(CEO)</small><br>\\nDerek Aberle<br>\\n<small>(President)</small></td>", "Headquarters": "<td class=\\"adr\\" style=\\"line-height:1.35em;\\"><span class=\\"locality\\">San Diego, California, U.S.</span></td>"}, "link": "https://en.wikipedia.org/wiki/Qualcomm", "summary": "Qualcomm is an American multinational semiconductor and telecommunications equipment company that designs and markets wireless telecommunications products and services. It derives most of its revenue from chipmaking and the bulk of its profit from patent licensing businesses."}'}
+2017-07-09 13:45:24 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:25 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Splunk+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:25 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:26 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Splunk+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 150
+2017-07-09 13:45:26 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:26 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Splunk&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:26 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:28 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Splunk&action=query HTTP/1.1" 200 262
+2017-07-09 13:45:28 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:28 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Splunk&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:28 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:30 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Splunk&action=query&explaintext= HTTP/1.1" 200 387
+2017-07-09 13:45:30 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:30 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 158975
+2017-07-09 13:45:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Splunk>
+{'logo': 'https://pbs.twimg.com/media/CdlFCYmXIAAGkiH.jpg',
+ 'name': u'Splunk Inc.',
+ 'nasdaq': u'SPLK',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">2003</td>", "Founders": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">Michael Baum, Rob Das and Erik Swan</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li>Michael Baum <small>(founding CEO)</small></li>\\n<li>Rob Das <small>(co founder)</small></li>\\n<li>Erik Swan <small>(co founder)</small></li>\\n<li>Doug Merritt <small>(CEO and President)</small></li>\\n</ul>\\n</div>\\n</td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/San_Francisco,_California\\" class=\\"mw-redirect\\" title=\\"San Francisco, California\\">San Francisco, California</a>, United States</td>"}, "link": "https://en.wikipedia.org/wiki/Splunk", "summary": "Splunk is an American multinational corporation based in San Francisco, California, that produces software for searching, monitoring, and analyzing machine-generated big data, via a web-style interface.\\nSplunk (the product) captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations."}'}
+2017-07-09 13:45:30 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:31 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Microsoft&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:31 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:32 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Microsoft&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 152
+2017-07-09 13:45:32 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:33 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Microsoft&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:33 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:34 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Microsoft&action=query HTTP/1.1" 200 261
+2017-07-09 13:45:34 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:35 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Microsoft&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:35 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:36 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Microsoft&action=query&explaintext= HTTP/1.1" 200 322
+2017-07-09 13:45:36 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:36 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 183884
+2017-07-09 13:45:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Microsoft>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/220px-Microsoft_logo_%282012%29.svg.png',
+ 'name': u'Microsoft',
+ 'nasdaq': u'MSFT',
+ 'wikipedia': '{"infobox": {"Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Chairman</a>: <a href=\\"https://en.wikipedia.org/wiki/John_W._Thompson\\" title=\\"John W. Thompson\\">John Thompson</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/President_(corporate_title)\\" title=\\"President (corporate title)\\">President</a>: Brad Smith<sup id=\\"cite_ref-1\\" class=\\"reference\\"><a href=\\"#cite_note-1\\">[1]</a></sup></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Chief_executive_officer\\" title=\\"Chief executive officer\\">CEO</a>: <a href=\\"https://en.wikipedia.org/wiki/Satya_Nadella\\" title=\\"Satya Nadella\\">Satya Nadella</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Technical_advisor\\" title=\\"Technical advisor\\">Technology advisor</a>: <a href=\\"https://en.wikipedia.org/wiki/Bill_Gates\\" title=\\"Bill Gates\\">Bill Gates</a></li>\\n</ul>\\n</div>\\n</td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Microsoft_Redmond_campus\\" title=\\"Microsoft Redmond campus\\">Microsoft Redmond campus</a>, <span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Redmond,_Washington\\" title=\\"Redmond, Washington\\">Redmond, Washington</a>, U.S.</span></td>", "Founded": "<td style=\\"line-height:1.35em;\\">April\\u00a04, 1975<span class=\\"noprint\\">; 42 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1975-04-04</span>)</span><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Albuquerque,_New_Mexico\\" title=\\"Albuquerque, New Mexico\\">Albuquerque</a>, <a href=\\"https://en.wikipedia.org/wiki/New_Mexico\\" title=\\"New Mexico\\">New Mexico</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></td>", "Owner": "<td style=\\"line-height:1.35em;\\">Bill Gates (2.46%)<sup id=\\"cite_ref-3\\" class=\\"reference\\"><a href=\\"#cite_note-3\\">[3]</a></sup></td>", "Founders": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Bill_Gates\\" title=\\"Bill Gates\\">Bill Gates</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Paul_Allen\\" title=\\"Paul Allen\\">Paul Allen</a></td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Microsoft\\" title=\\"List of mergers and acquisitions by Microsoft\\">List of Microsoft subsidiaries</a></td>"}, "link": "https://en.wikipedia.org/wiki/Microsoft", "summary": "Microsoft Corporation (, abbreviated as MS) is an American multinational technology company headquartered in Redmond, Washington. It develops, manufactures, licenses, supports and sells computer software, consumer electronics, personal computers, and services."}'}
+2017-07-09 13:45:36 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:37 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Comcast+Corporation&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:37 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:38 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Comcast+Corporation&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 151
+2017-07-09 13:45:38 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:39 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Comcast&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:39 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:41 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Comcast&action=query HTTP/1.1" 200 260
+2017-07-09 13:45:41 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:41 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Comcast&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:41 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:42 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Comcast&action=query&explaintext= HTTP/1.1" 200 374
+2017-07-09 13:45:42 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:43 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 183722
+2017-07-09 13:45:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Comcast>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Comcast_Logo.svg/200px-Comcast_Logo.svg.png',
+ 'name': u'Comcast Corporation',
+ 'nasdaq': u'CMCSA',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">June\\u00a028, 1963<span class=\\"noprint\\">; 54 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1963-06-28</span>)</span><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Tupelo,_Mississippi\\" title=\\"Tupelo, Mississippi\\">Tupelo</a>, <a href=\\"https://en.wikipedia.org/wiki/Mississippi\\" title=\\"Mississippi\\">Mississippi</a>, United States</td>", "Founders": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Ralph_J._Roberts\\" title=\\"Ralph J. Roberts\\">Ralph J. Roberts</a><br>\\nDaniel Aaron<sup id=\\"cite_ref-3\\" class=\\"reference\\"><a href=\\"#cite_note-3\\">[3]</a></sup><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Julian_A._Brodsky\\" title=\\"Julian A. Brodsky\\">Julian A. Brodsky</a></td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Midco\\" title=\\"Midco\\">Midco</a> (49%)</li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Comcast_Interactive_Media\\" title=\\"Comcast Interactive Media\\">Comcast Interactive Media</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Comcast_Spectacor\\" title=\\"Comcast Spectacor\\">Comcast Spectacor</a></li>\\n<li>Comcast Ventures</li>\\n</ul>\\n</div>\\n</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Brian_L._Roberts\\" title=\\"Brian L. Roberts\\">Brian L. Roberts</a></li>\\n<li>(Chairman &amp; CEO)</li>\\n<li>Michael Cavanagh<sup id=\\"cite_ref-5\\" class=\\"reference\\"><a href=\\"#cite_note-5\\">[5]</a></sup></li>\\n<li>(Senior Executive Vice President, CFO)</li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/David_L._Cohen\\" title=\\"David L. Cohen\\">David L. Cohen</a></li>\\n<li>(Executive Vice President)</li>\\n</ul>\\n</div>\\n</td>", "Headquarters": "<td class=\\"adr\\" style=\\"line-height:1.35em;\\"><span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Philadelphia\\" title=\\"Philadelphia\\">Philadelphia</a>, <a href=\\"https://en.wikipedia.org/wiki/Pennsylvania\\" title=\\"Pennsylvania\\">Pennsylvania</a></span>, <span class=\\"country-name\\"><a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">United States</a></span></td>"}, "link": "https://en.wikipedia.org/wiki/Comcast", "summary": "Comcast Corporation (formerly registered as Comcast Holdings) is an American global telecommunications conglomerate that is the largest broadcasting and cable television company in the world by revenue. It is the second-largest pay-TV company after AT&T, largest cable TV company and largest home Internet service provider in the United States, and the nation\'s third-largest home telephone service provider."}'}
+2017-07-09 13:45:43 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:43 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Intel+Corporation&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:43 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:45 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Intel+Corporation&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 150
+2017-07-09 13:45:45 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:45 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Intel&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:45 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:47 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Intel&action=query HTTP/1.1" 200 256
+2017-07-09 13:45:47 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:47 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Intel&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:47 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:49 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Intel&action=query&explaintext= HTTP/1.1" 200 448
+2017-07-09 13:45:49 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:49 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 170671
+2017-07-09 13:45:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Intel>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/150px-Intel-logo.svg.png',
+ 'name': u'Intel Corporation',
+ 'nasdaq': u'INTC',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">July\\u00a018, 1968<span class=\\"noprint\\">; 48 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1968-07-18</span>)</span></td>", "Founders": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Gordon_Moore\\" title=\\"Gordon Moore\\">Gordon Moore</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Robert_Noyce\\" title=\\"Robert Noyce\\">Robert Noyce</a></td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Mobileye\\" title=\\"Mobileye\\">Mobileye</a> [[McAfee Cybersecurity]</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Gordon_Moore\\" title=\\"Gordon Moore\\">Gordon Moore</a><br>\\n<small>(Chairman Emeritus)</small><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Andy_Bryant\\" title=\\"Andy Bryant\\">Andy Bryant</a><br>\\n<small>(Chairman)</small><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Brian_Krzanich\\" title=\\"Brian Krzanich\\">Brian Krzanich</a><br>\\n<small>(CEO)</small></td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Santa_Clara,_California\\" title=\\"Santa Clara, California\\">Santa Clara, California</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></td>"}, "link": "https://en.wikipedia.org/wiki/Intel", "summary": "Intel Corporation (also known as Intel, stylized as intel) is an American multinational corporation and technology company headquartered in Santa Clara, California (colloquially referred to as \\"Silicon Valley\\") that was founded by Gordon Moore (of Moore\'s law fame) and Robert Noyce. It is the world\'s largest and highest valued semiconductor chip makers based on revenue, and is the inventor of the x86 series of microprocessors: the processors found in most personal computers (PCs)."}'}
+2017-07-09 13:45:49 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:50 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Apple+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:50 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:51 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Apple+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 154
+2017-07-09 13:45:51 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:51 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Apple+Inc.&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:51 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:52 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Apple+Inc.&action=query HTTP/1.1" 200 264
+2017-07-09 13:45:52 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:52 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Apple+Inc.&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:52 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:54 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Apple+Inc.&action=query&explaintext= HTTP/1.1" 200 279
+2017-07-09 13:45:54 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:45:54 [requests.packages.urllib3.connectionpool] DEBUG: http://localhost:8000 "POST /include_company/ HTTP/1.1" 500 193349
+2017-07-09 13:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://en.wikipedia.org/wiki/Apple_Inc.>
+{'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/80px-Apple_logo_black.svg.png',
+ 'name': u'Apple Inc.',
+ 'nasdaq': u'AAPL',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">April\\u00a01, 1976<span class=\\"noprint\\">; 41 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1976-04-01</span>)</span></td>", "Founders": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Steve_Jobs\\" title=\\"Steve Jobs\\">Steve Jobs</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Steve_Wozniak\\" title=\\"Steve Wozniak\\">Steve Wozniak</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Ronald_Wayne\\" title=\\"Ronald Wayne\\">Ronald Wayne</a></li>\\n</ul>\\n</div>\\n</td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\">\\n<div class=\\"hlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/FileMaker_Inc.\\" title=\\"FileMaker Inc.\\">FileMaker Inc.</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Anobit\\" title=\\"Anobit\\">Anobit</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Braeburn_Capital\\" title=\\"Braeburn Capital\\">Braeburn Capital</a></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Beats_Electronics\\" title=\\"Beats Electronics\\">Beats Electronics</a></li>\\n<li>Apple Energy, LLC</li>\\n<li>Apple Sales International<sup id=\\"cite_ref-2\\" class=\\"reference\\"><a href=\\"#cite_note-2\\">[2]</a></sup></li>\\n</ul>\\n</div>\\n</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Arthur_D._Levinson\\" title=\\"Arthur D. Levinson\\">Arthur D. Levinson</a> <small>(<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Chairman</a>)</small></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Tim_Cook\\" title=\\"Tim Cook\\">Tim Cook</a> <small>(<a href=\\"https://en.wikipedia.org/wiki/Chief_executive_officer\\" title=\\"Chief executive officer\\">CEO</a>)</small></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Jonathan_Ive\\" title=\\"Jonathan Ive\\">Jonathan Ive</a> <small>(<a href=\\"https://en.wikipedia.org/wiki/Chief_design_officer\\" title=\\"Chief design officer\\">CDO</a>)</small></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Luca_Maestri\\" title=\\"Luca Maestri\\">Luca Maestri</a> <small>(<a href=\\"https://en.wikipedia.org/wiki/Chief_financial_officer\\" title=\\"Chief financial officer\\">CFO</a>)</small></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Jeff_Williams_(Apple)\\" title=\\"Jeff Williams (Apple)\\">Jeff Williams</a> <small>(<a href=\\"https://en.wikipedia.org/wiki/Chief_operating_officer\\" title=\\"Chief operating officer\\">COO</a>)</small></li>\\n</ul>\\n</div>\\n</td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Apple_Campus\\" title=\\"Apple Campus\\">Apple Campus</a>, <span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Cupertino,_California\\" title=\\"Cupertino, California\\">Cupertino</a>, <a href=\\"https://en.wikipedia.org/wiki/California\\" title=\\"California\\">California</a></span>, <span class=\\"country-name\\"><a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></span></td>"}, "link": "https://en.wikipedia.org/wiki/Apple_Inc.", "summary": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services."}'}
+2017-07-09 13:45:54 [scrapy.extensions.logstats] INFO: Crawled 20 pages (at 20 pages/min), scraped 11 items (at 11 items/min)
+2017-07-09 13:45:54 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:54 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Ascena+Retail+Group+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:54 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:56 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Ascena+Retail+Group+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 160
+2017-07-09 13:45:56 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:57 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Ascena+Retail+Group&action=query HTTP/1.1" 301 0
+2017-07-09 13:45:57 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:45:58 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Ascena+Retail+Group&action=query HTTP/1.1" 200 279
+2017-07-09 13:45:58 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:45:59 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Ascena+Retail+Group&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:45:59 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:00 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Ascena+Retail+Group&action=query&explaintext= HTTP/1.1" 200 249
+2017-07-09 13:46:00 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:00 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/commons/7/7f/DressBarn_new_logo.gif',
+ 'name': u'Ascena Retail Group Inc.',
+ 'nasdaq': u'ASNA',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Stamford,_Connecticut\\" title=\\"Stamford, Connecticut\\">Stamford, Connecticut</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a> (February 13, 1962)</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">Roslyn Jaffe, Founder<br>\\nDavid R. Jaffe, President and CEO<br>\\n<sup id=\\"cite_ref-Judith_Langley_Named_Dressbarn_Merchandising_Chief_2-0\\" class=\\"reference\\"><a href=\\"#cite_note-Judith_Langley_Named_Dressbarn_Merchandising_Chief-2\\">[2]</a></sup> Elliot Jaffe, Chairman</td>", "Subsidiaries": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Ann_Inc.\\" title=\\"Ann Inc.\\">Ann Taylor</a><br>\\nCacique<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Catherines\\" class=\\"mw-redirect\\" title=\\"Catherines\\">Catherines</a><br>\\nDressBarn<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Lane_Bryant\\" title=\\"Lane Bryant\\">Lane Bryant</a><br>\\nLou &amp; Grey<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Maurices\\" title=\\"Maurices\\">Maurices</a><br>\\nLoft<br>\\n<a href=\\"https://en.wikipedia.org/wiki/Tween_Brands\\" title=\\"Tween Brands\\">Justice</a></td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Mahwah,_New_Jersey\\" title=\\"Mahwah, New Jersey\\">Mahwah, New Jersey</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></td>"}, "link": "https://en.wikipedia.org/wiki/Ascena_Retail_Group", "summary": "Ascena Retail Group, Inc. (formerly Dress Barn and doing business as Dressbarn) is an American retailer of women\'s clothing."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7d34f750>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:00 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:01 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Marvell+Technology+Group%2C+Ltd.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:01 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:02 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Marvell+Technology+Group%2C+Ltd.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 164
+2017-07-09 13:46:02 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:03 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Marvell+Technology+Group&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:03 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:04 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Marvell+Technology+Group&action=query HTTP/1.1" 200 284
+2017-07-09 13:46:04 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:05 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Marvell+Technology+Group&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:05 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:06 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Marvell+Technology+Group&action=query&explaintext= HTTP/1.1" 200 284
+2017-07-09 13:46:06 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:06 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Marvell_Logo.svg/220px-Marvell_Logo.svg.png',
+ 'name': u'Marvell Technology Group, Ltd.',
+ 'nasdaq': u'MRVL',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">1995<span class=\\"noprint\\">; 22\\u00a0years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1995</span>)</span></td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li>Richard S. Hill, <small>(Chairman)</small></li>\\n<li>Matthew Murphy <small>(President and CEO)</small></li>\\n<li>Jean X. Hu <small>(CFO)</small></li>\\n</ul>\\n</div>\\n</td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\">\\n<div class=\\"plainlist\\">\\n<ul>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Santa_Clara,_California\\" title=\\"Santa Clara, California\\">Santa Clara, California</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">US</a> <small>(operational)</small></li>\\n<li><a href=\\"https://en.wikipedia.org/wiki/Hamilton,_Bermuda\\" title=\\"Hamilton, Bermuda\\">Hamilton, Bermuda</a> <small>(legal domicile)</small></li>\\n</ul>\\n</div>\\n</td>"}, "link": "https://en.wikipedia.org/wiki/Marvell_Technology_Group", "summary": "Marvell Technology Group, Limited, is a producer of storage, communications and consumer semiconductor products. The company was founded in 1995 and has approximately 7,000 employees."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7d390b10>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:06 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:07 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Nutanix&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:07 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:09 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Nutanix&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 151
+2017-07-09 13:46:09 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:09 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Nutanix&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:09 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:11 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Nutanix&action=query HTTP/1.1" 200 263
+2017-07-09 13:46:11 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:12 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Nutanix&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:12 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:14 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Nutanix&action=query&explaintext= HTTP/1.1" 200 310
+2017-07-09 13:46:14 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:14 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Nutanix_Logo.svg/220px-Nutanix_Logo.svg.png',
+ 'name': u'Nutanix',
+ 'nasdaq': u'NTNX',
+ 'wikipedia': '{"infobox": {"Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\">Dheeraj Pandey, co-founder and CEO<br>\\nSudheesh Nair, President</td>", "Headquarters": "<td class=\\"adr\\" style=\\"line-height:1.35em;\\"><span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/San_Jose,_California\\" title=\\"San Jose, California\\">San Jose, California</a></span>, <span class=\\"country-name\\">United States</span></td>"}, "link": "https://en.wikipedia.org/wiki/Nutanix", "summary": "Nutanix is a cloud computing software company that sells what it calls hyper-converged infrastructure (HCI) appliances and software-defined storage.\\nNutanix was founded in 2009 by Dheeraj Pandey, Mohit Aron and Ajeet Singh."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7d34f250>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:14 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:14 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=jd.com&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:14 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:16 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=jd.com&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 151
+2017-07-09 13:46:16 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:16 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=JD.com&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:16 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:17 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=JD.com&action=query HTTP/1.1" 200 261
+2017-07-09 13:46:17 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:17 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=JD.com&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:17 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:18 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=JD.com&action=query&explaintext= HTTP/1.1" 200 404
+2017-07-09 13:46:18 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:18 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/en/thumb/7/79/JD_logo.png/230px-JD_logo.png',
+ 'name': u'jd.com',
+ 'nasdaq': u'JD',
+ 'wikipedia': '{"infobox": {"Headquarters": "<td class=\\"adr\\"><span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Beijing\\" title=\\"Beijing\\">Beijing</a>, China</span></td>"}, "link": "https://en.wikipedia.org/wiki/JD.com", "summary": "JD.com (Chinese: \\u4eac\\u4e1c\\u5546\\u57ce; pinyin: J\\u012bngd\\u014dng Sh\\u0101ngch\\u00e9ng), also known as Jingdong and formerly called 360buy, is a Chinese e-commerce company headquartered in Beijing. It is one of the two largest B2C online retailers in China by transaction volume and revenue, a member of the Fortune Global 500 and a major competitor to Alibaba-run Tmall."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7df99390>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:18 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:18 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Applied+Materials%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:18 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:20 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Applied+Materials%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 158
+2017-07-09 13:46:20 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:20 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Applied+Materials&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:20 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:22 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Applied+Materials&action=query HTTP/1.1" 200 274
+2017-07-09 13:46:22 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:22 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Applied+Materials&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:22 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:24 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Applied+Materials&action=query&explaintext= HTTP/1.1" 200 326
+2017-07-09 13:46:24 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:24 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/en/thumb/7/7e/Applied_Materials_Inc._Logo.svg/175px-Applied_Materials_Inc._Logo.svg.png',
+ 'name': u'Applied Materials, Inc.',
+ 'nasdaq': u'AMAT',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">Nov.10, 1967</td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Gary_E._Dickerson\\" title=\\"Gary E. Dickerson\\">Gary E. Dickerson</a><br>\\n<small>(<a href=\\"https://en.wikipedia.org/wiki/President\\" title=\\"President\\">President</a> &amp; <a href=\\"https://en.wikipedia.org/wiki/Chief_Executive_Officer\\" class=\\"mw-redirect\\" title=\\"Chief Executive Officer\\">CEO</a>)</small><br>\\nWillem P.Roelandts<br>\\n<small>(<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Chairman</a>)</small></td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Santa_Clara,_California\\" title=\\"Santa Clara, California\\">Santa Clara, California</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></td>"}, "link": "https://en.wikipedia.org/wiki/Applied_Materials", "summary": "Applied Materials, Inc. is an American corporation that supplies equipment, services and software to enable the manufacture of semiconductor (integrated circuit) chips for electronics, flat panel displays for computers, smartphones and televisions, and solar products."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7d390710>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:24 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:24 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Sirius+XM+Holdings%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:24 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:26 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Sirius+XM+Holdings%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 159
+2017-07-09 13:46:26 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:26 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=SiriusXM+Canada&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:26 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:29 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=SiriusXM+Canada&action=query HTTP/1.1" 200 277
+2017-07-09 13:46:29 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:30 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=SiriusXM+Canada&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:30 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:32 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=SiriusXM+Canada&action=query&explaintext= HTTP/1.1" 200 267
+2017-07-09 13:46:32 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:32 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sirius_XM_Radio_Logo.svg/220px-Sirius_XM_Radio_Logo.svg.png',
+ 'name': u'Sirius XM Holdings, Inc.',
+ 'nasdaq': u'SIRI',
+ 'wikipedia': '{"infobox": {"Founded": "<td style=\\"line-height:1.35em;\\">May\\u00a017, 1990<span class=\\"noprint\\">; 27 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1990-05-17</span>)</span></td>", "Key people": "<td class=\\"agent\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Greg_Maffei\\" title=\\"Greg Maffei\\">Greg Maffei</a><br>\\n<small>(<a href=\\"https://en.wikipedia.org/wiki/Chairman\\" title=\\"Chairman\\">Chairman</a>)</small><br>\\nJames E. Meyer<br>\\n<small>(<a href=\\"https://en.wikipedia.org/wiki/Chief_executive_officer\\" title=\\"Chief executive officer\\">CEO</a>)</small><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Scott_Greenstein\\" title=\\"Scott Greenstein\\">Scott Greenstein</a><br>\\n<small>(<a href=\\"https://en.wikipedia.org/wiki/President_(corporate_title)\\" title=\\"President (corporate title)\\">President</a> and <a href=\\"https://en.wikipedia.org/wiki/Chief_Content_Officer\\" class=\\"mw-redirect\\" title=\\"Chief Content Officer\\">CCO</a>)</small></td>", "Owner": "<td style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/Liberty_Media\\" title=\\"Liberty Media\\">Liberty Media</a> (67.8%)<sup id=\\"cite_ref-4-traders_2-0\\" class=\\"reference\\"><a href=\\"#cite_note-4-traders-2\\">[2]</a></sup></td>", "Headquarters": "<td class=\\"label\\" style=\\"line-height:1.35em;\\"><a href=\\"https://en.wikipedia.org/wiki/1221_Avenue_of_the_Americas\\" title=\\"1221 Avenue of the Americas\\">1221 Avenue of the Americas</a><br>\\n<span class=\\"nowrap\\"><a href=\\"https://en.wikipedia.org/wiki/New_York_City\\" title=\\"New York City\\">New York City</a>, <a href=\\"https://en.wikipedia.org/wiki/New_York_(state)\\" class=\\"mw-redirect\\" title=\\"New York (state)\\">New York</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></span></td>"}, "link": "https://en.wikipedia.org/wiki/Sirius_XM_Holdings", "summary": "Sirius XM Canada Holdings Inc. (commonly referred to as SiriusXM Canada) is a Canadian radio broadcasting company, which operates as a Canadian affiliate of Sirius XM Radio."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7d390410>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:32 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:32 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=PayPal+Holdings&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:32 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:34 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=PayPal+Holdings&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 151
+2017-07-09 13:46:34 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:35 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=PayPal&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:35 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:36 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=PayPal&action=query HTTP/1.1" 200 260
+2017-07-09 13:46:36 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:36 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=PayPal&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:36 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:37 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=PayPal&action=query&explaintext= HTTP/1.1" 200 298
+2017-07-09 13:46:37 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:37 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/220px-PayPal.svg.png',
+ 'name': u'PayPal Holdings',
+ 'nasdaq': u'PYPL',
+ 'wikipedia': '{"infobox": {"Founded": "<td>December\\u00a01998<span class=\\"noprint\\">; 18\\u00a0years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">1998-12</span>)</span> (as <a href=\\"https://en.wikipedia.org/wiki/Confinity\\" title=\\"Confinity\\">Confinity</a>)</td>", "Subsidiaries": "<td><a href=\\"https://en.wikipedia.org/wiki/Braintree_(company)\\" title=\\"Braintree (company)\\">Braintree</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Paydiant\\" title=\\"Paydiant\\">Paydiant</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Venmo\\" title=\\"Venmo\\">Venmo</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/PayPal_Credit\\" title=\\"PayPal Credit\\">PayPal Credit</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Xoom_Corporation\\" title=\\"Xoom Corporation\\">Xoom Corporation</a><br>\\n<a href=\\"/w/index.php?title=TIO_Networks&amp;action=edit&amp;redlink=1\\" class=\\"new\\" title=\\"TIO Networks (page does not exist)\\">TIO Networks</a><br>\\ncard.io</td>", "Headquarters": "<td class=\\"adr\\"><span class=\\"locality\\">2211 North First Street,<br>\\n<a href=\\"https://en.wikipedia.org/wiki/San_Jose,_California\\" title=\\"San Jose, California\\">San Jose, California</a>, <a href=\\"https://en.wikipedia.org/wiki/United_States\\" title=\\"United States\\">U.S.</a></span></td>"}, "link": "https://en.wikipedia.org/wiki/PayPal", "summary": "PayPal Holdings, Inc. is an American company operating a worldwide online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like checks and money orders."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7d390410>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:37 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:38 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Zynga+Incorporated&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:38 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:38 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Zynga+Incorporated&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 149
+2017-07-09 13:46:38 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:39 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Zynga&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:39 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:40 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Zynga&action=query HTTP/1.1" 200 260
+2017-07-09 13:46:40 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:41 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Zynga&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:41 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:42 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Zynga&action=query&explaintext= HTTP/1.1" 200 493
+2017-07-09 13:46:42 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:42 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/en/thumb/3/32/Zynga_logo.jpg/250px-Zynga_logo.jpg',
+ 'name': u'Zynga Incorporated',
+ 'nasdaq': u'ZNGA',
+ 'wikipedia': '{"infobox": {"Founded": "<td>April 2007</td>"}, "link": "https://en.wikipedia.org/wiki/Zynga", "summary": "Zynga  is an American video game developer running social video game services founded in July 2007 and headquartered in San Francisco, California, United States. The company develops social games that work stand-alone on mobile phone platforms such as Apple iOS, Android, Windows Phone and on the Internet through its website, Zynga.com, and social networking websites such as Facebook, Google+, and Tencent QQ. Zynga states its mission as \\"connecting the world through games.\\" The company was named in honor of Zinga, CEO Mark Pincus\'s deceased American bulldog."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7df99250>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Facebook> (referer: https://en.wikipedia.org/wiki/Main_Page)
+2017-07-09 13:46:43 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:43 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?srinfo=suggestion&srsearch=Facebook%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:43 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:44 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?srinfo=suggestion&srsearch=Facebook%2C+Inc.&format=json&srlimit=1&list=search&srprop=&limit=1&action=query HTTP/1.1" 200 153
+2017-07-09 13:46:44 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:44 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Facebook&action=query HTTP/1.1" 301 0
+2017-07-09 13:46:44 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:46 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?inprop=url&redirects=&format=json&ppprop=disambiguation&prop=info%7Cpageprops&titles=Facebook&action=query HTTP/1.1" 200 263
+2017-07-09 13:46:46 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): en.wikipedia.org
+2017-07-09 13:46:47 [requests.packages.urllib3.connectionpool] DEBUG: http://en.wikipedia.org:80 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Facebook&action=query&explaintext= HTTP/1.1" 301 0
+2017-07-09 13:46:47 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): en.wikipedia.org
+2017-07-09 13:46:50 [requests.packages.urllib3.connectionpool] DEBUG: https://en.wikipedia.org:443 "GET /w/api.php?format=json&exsentences=2&prop=extracts&titles=Facebook&action=query&explaintext= HTTP/1.1" 200 383
+2017-07-09 13:46:50 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost
+2017-07-09 13:46:50 [scrapy.core.scraper] ERROR: Error processing {'logo': u'//upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/250px-Facebook_New_Logo_%282015%29.svg.png',
+ 'name': u'Facebook, Inc.',
+ 'nasdaq': u'FB',
+ 'wikipedia': '{"infobox": {"Founded": "<td>February\\u00a04, 2004<span class=\\"noprint\\">; 13 years ago</span><span style=\\"display:none\\">\\u00a0(<span class=\\"bday dtstart published updated\\">2004-02-04</span>)</span></td>", "Subsidiaries": "<td><a href=\\"https://en.wikipedia.org/wiki/Instagram\\" title=\\"Instagram\\">Instagram</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Facebook_Messenger\\" title=\\"Facebook Messenger\\">Messenger</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/WhatsApp\\" title=\\"WhatsApp\\">WhatsApp</a><br>\\n<a href=\\"https://en.wikipedia.org/wiki/Oculus_VR\\" title=\\"Oculus VR\\">Oculus VR</a></td>", "Headquarters": "<td class=\\"adr\\"><span class=\\"locality\\"><a href=\\"https://en.wikipedia.org/wiki/Menlo_Park,_California\\" title=\\"Menlo Park, California\\">Menlo Park, California</a></span>, <span class=\\"country-name\\">U.S.</span></td>"}, "link": "https://en.wikipedia.org/wiki/Facebook", "summary": "Facebook is an American for-profit corporation and an online social media and social networking service based in Menlo Park, California. The Facebook website was launched on February 4, 2004, by Mark Zuckerberg, along with fellow Harvard College students and roommates, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes."}'}
+Traceback (most recent call last):
+  File "/home/stephanie/anaconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "site_app_scraper/pipelines.py", line 13, in process_item
+    requests.post('http://localhost:8000/include_company/', data=item)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/stephanie/.local/lib/python2.7/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /include_company/ (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f5a7f165b50>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2017-07-09 13:46:50 [scrapy.extensions.logstats] INFO: Crawled 21 pages (at 1 pages/min), scraped 11 items (at 0 items/min)
+2017-07-09 13:46:50 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-07-09 13:46:50 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 8393,
+ 'downloader/request_count': 22,
+ 'downloader/request_method_count/GET': 22,
+ 'downloader/response_bytes': 1248207,
+ 'downloader/response_count': 22,
+ 'downloader/response_status_count/200': 21,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 7, 9, 16, 46, 50, 790235),
+ 'item_scraped_count': 11,
+ 'log_count/DEBUG': 307,
+ 'log_count/ERROR': 9,
+ 'log_count/INFO': 9,
+ 'memusage/max': 143912960,
+ 'memusage/startup': 58490880,
+ 'request_depth_max': 1,
+ 'response_received_count': 21,
+ 'scheduler/dequeued': 22,
+ 'scheduler/dequeued/memory': 22,
+ 'scheduler/enqueued': 22,
+ 'scheduler/enqueued/memory': 22,
+ 'start_time': datetime.datetime(2017, 7, 9, 16, 44, 48, 198172)}
+2017-07-09 13:46:50 [scrapy.core.engine] INFO: Spider closed (finished)
