@@ -3,7 +3,7 @@ from ..utils import CompanyUtils
 
 register = template.Library()
 
-@register.inclusion_tag('siteApp/company_details.html')
+@register.inclusion_tag('siteApp/company_small_details.html')
 def company_small_details(company):
     previous = company.getActualStock().value
     return {

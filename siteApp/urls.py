@@ -39,9 +39,9 @@ def stock_loop():
         company.stock = CompanyUtils.getActualStock([company.nasdaq]);
         company.save()
 
-# stock_thread = PeriodicThread(callback=stock_loop, period=(60))
-# stock_thread.start()
-#
-# share_thread = PeriodicThread(callback=share_loop, period=(12 * 60 * 60))
-# share_thread.start()
-# share_loop()
+stock_thread = PeriodicThread(callback=stock_loop, period=(60))
+stock_thread.start()
+
+share_thread = PeriodicThread(callback=share_loop, period=(12 * 60 * 60))
+share_thread.start()
+share_loop()

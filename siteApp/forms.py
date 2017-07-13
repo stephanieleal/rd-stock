@@ -3,31 +3,27 @@ from django import forms
 class UserRegistrationForm(forms.Form):
     first_name = forms.CharField(
         required = True,
-        label="",
-        max_length = 30,
-        widget=forms.TextInput(attrs={'placeholder': 'First Name', 'class': 'form-control'})
+        label = "First name",
+        max_length = 30
     )
     last_name = forms.CharField(
         required = True,
-        label="",
-        max_length = 30,
-        widget=forms.TextInput(attrs={'placeholder': 'Last Name', 'class': 'form-control'})
+        label = "Last name",
+        max_length = 30
     )
     username = forms.CharField(
         required = True,
-        label="",
-        max_length = 32,
-        widget=forms.TextInput(attrs={'placeholder': 'Username', 'class': 'form-control'})
+        label = "Username",
+        max_length = 32
     )
     email = forms.CharField(
         required = True,
-        label="",
+        label = 'Email',
         max_length = 32,
-        widget=forms.TextInput(attrs={'placeholder': 'Email', 'class': 'form-control'})
     )
     password = forms.CharField(
         required = True,
-        label="",
+        label = 'Password',
         max_length = 32,
-        widget = forms.PasswordInput(attrs={'placeholder': 'Password', 'class': 'form-control'})
+        widget = forms.PasswordInput()
     )
