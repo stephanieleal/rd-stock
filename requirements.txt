@@ -2,7 +2,7 @@ attrs==15.2.0
 babelfish==0.5.5
 beautifulsoup4==4.6.0
 boto==2.38.0
-certifi==2017.4.17
+certifi==2022.12.7
 chardet==3.0.4
 cryptography==1.2.3
 cssselect==0.9.1
